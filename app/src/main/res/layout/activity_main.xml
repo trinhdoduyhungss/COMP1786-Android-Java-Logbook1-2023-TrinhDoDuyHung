@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:layout_gravity="center"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/resultEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:autofillHints="none"
+        android:background="@null"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:gravity="end"
+        android:importantForAccessibility="no"
+        android:inputType="none"
+        android:text="0"
+        android:textColor="@color/colorPrimary"
+        android:textSize="56sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/calculatorGrid"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <GridLayout
+        android:id="@+id/calculatorGrid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:columnCount="4"
+        android:rowCount="5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <!-- Row 1 -->
+        <Button
+            android:id="@+id/btnClear"
+            style="@style/CalculatorButtonStyle"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_columnSpan="3"
+            android:layout_gravity="fill"
+            android:onClick="onButtonClick"
+            android:text="AC" />
+
+        <!-- Row 2 -->
+        <Button
+            android:id="@+id/btnDivide"
+            style="@style/CalculatorButtonStyle"
+            android:layout_row="0"
+            android:layout_column="3"
+            android:layout_gravity="fill"
+            android:onClick="onButtonClick"
+            android:text="÷" />
+
+        <Button
+            android:id="@+id/btn7"
+            style="@style/CalculatorButtonStyle"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_gravity="fill"
+            android:onClick="onButtonClick"
+            android:text="7" />
+
+        <Button
+            android:id="@+id/btn8"
+            style="@style/CalculatorButtonStyle"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:layout_gravity="fill"
+            android:onClick="onButtonClick"
+            android:text="8" />
+
+        <Button
+            android:id="@+id/btn9"
+            style="@style/CalculatorButtonStyle"
+            android:layout_row="1"
+            android:layout_column="2"
+            android:layout_gravity="fill"
+            android:onClick="onButtonClick"
+            android:text="9" />
+
+        <Button
+            android:id="@+id/btnMultiply"
+            style="@style/CalculatorButtonStyle"
+            android:layout_row="1"
+            android:layout_column="3"
+            android:layout_gravity="fill"
+            android:onClick="onButtonClick"
+            android:text="*" />
+
+        <!-- Row 3 -->
+        <Button
+            android:id="@+id/btn4"
+            style="@style/CalculatorButtonStyle"
+            android:layout_row="2"
+            android:layout_column="0"
+            android:layout_gravity="fill"
+            android:onClick="onButtonClick"
+            android:text="4" />
+
+        <Button
+            android:id="@+id/btn5"
+            style="@style/CalculatorButtonStyle"
+            android:layout_row="2"
+            android:layout_column="1"
+            android:layout_gravity="fill"
+            android:onClick="onButtonClick"
+            android:text="5" />
+
+        <Button
+            android:id="@+id/btn6"
+            style="@style/CalculatorButtonStyle"
+            android:layout_row="2"
+            android:layout_column="2"
+            android:layout_gravity="fill"
+            android:onClick="onButtonClick"
+            android:text="6" />
+
+        <Button
+            android:id="@+id/btnSubtract"
+            style="@style/CalculatorButtonStyle"
+            android:layout_row="2"
+            android:layout_column="3"
+            android:layout_gravity="fill"
+            android:onClick="onButtonClick"
+            android:text="-" />
+
+        <!-- Row 4 -->
+        <Button
+            android:id="@+id/btn1"
+            style="@style/CalculatorButtonStyle"
+            android:layout_row="3"
+            android:layout_column="0"
+            android:layout_gravity="fill"
+            android:onClick="onButtonClick"
+            android:text="1" />
+
+        <Button
+            android:id="@+id/btn2"
+            style="@style/CalculatorButtonStyle"
+            android:layout_row="3"
+            android:layout_column="1"
+            android:layout_gravity="fill"
+            android:onClick="onButtonClick"
+            android:text="2" />
+
+        <Button
+            android:id="@+id/btn3"
+            style="@style/CalculatorButtonStyle"
+            android:layout_row="3"
+            android:layout_column="2"
+            android:layout_gravity="fill"
+            android:onClick="onButtonClick"
+            android:text="3" />
+
+        <Button
+            android:id="@+id/btnAdd"
+            style="@style/CalculatorButtonStyle"
+            android:layout_row="3"
+            android:layout_column="3"
+            android:layout_gravity="fill"
+            android:onClick="onButtonClick"
+            android:text="+" />
+
+        <!-- Row 5 -->
+        <Button
+            android:id="@+id/btn0"
+            style="@style/CalculatorButtonStyle"
+            android:layout_row="4"
+            android:layout_column="0"
+            android:layout_gravity="fill"
+            android:onClick="onButtonClick"
+            android:text="0" />
+
+        <Button
+            android:id="@+id/btnDecimal"
+            style="@style/CalculatorButtonStyle"
+            android:layout_row="4"
+            android:layout_column="1"
+            android:layout_gravity="fill"
+            android:onClick="onButtonClick"
+            android:text="." />
+
+        <Button
+            android:id="@+id/btnEquals"
+            style="@style/CalculatorButtonStyle"
+            android:layout_row="4"
+            android:layout_column="3"
+            android:layout_gravity="fill"
+            android:onClick="onButtonClick"
+            android:text="=" />
+
+        <Button
+            android:id="@+id/btnDelete"
+            style="@style/CalculatorButtonStyle"
+            android:layout_row="4"
+            android:layout_column="2"
+            android:layout_gravity="fill"
+            android:onClick="onButtonClick"
+            android:text="DEL" />
+    </GridLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
