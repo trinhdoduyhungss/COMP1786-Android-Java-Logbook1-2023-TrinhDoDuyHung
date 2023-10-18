@@ -114,6 +114,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+
     public void onClearClick() {
         currentInput = "";
         operator = "";
@@ -121,6 +122,7 @@ public class MainActivity extends AppCompatActivity {
         updateResultText();
     }
 
+    // This method updates the result text field
     private void updateResultText() {
         if(!operator.isEmpty()) {
             String lastText = resultEditText.getText().toString();
